@@ -1,0 +1,308 @@
+{
+  "id": "654d44b0-3fe5-4fe6-8f64-345be7f2c092",
+  "timestamp": "20250618_133328",
+  "datetime": "2025-06-18T13:33:28.499049",
+  "type": "large",
+  "data": {
+    "supplies": [
+      {
+        "name": "Water",
+        "value": 10,
+        "weight": 3.3,
+        "category": "food",
+        "food_type": "liquid"
+      },
+      {
+        "name": "Food",
+        "value": 8,
+        "weight": 2.2,
+        "category": "food",
+        "food_type": "solid"
+      },
+      {
+        "name": "Medicine",
+        "value": 15,
+        "weight": 1,
+        "category": "non-food",
+        "food_type": null
+      },
+      {
+        "name": "Blankets",
+        "value": 5,
+        "weight": 4,
+        "category": "non-food",
+        "food_type": null
+      },
+      {
+        "name": "First Aid",
+        "value": 12,
+        "weight": 2,
+        "category": "non-food",
+        "food_type": null
+      },
+      {
+        "name": "Emergency Kit",
+        "value": 20,
+        "weight": 5,
+        "category": "non-food",
+        "food_type": null
+      }
+    ],
+    "vehicles": [
+      {
+        "id": 1,
+        "name": "Large Truck",
+        "capacity": 30,
+        "status": "available"
+      },
+      {
+        "id": 2,
+        "name": "Medical Van",
+        "capacity": 15,
+        "status": "available"
+      },
+      {
+        "id": 3,
+        "name": "Emergency Vehicle 1",
+        "capacity": 20,
+        "status": "available"
+      },
+      {
+        "id": 4,
+        "name": "Supply Truck",
+        "capacity": 25,
+        "status": "available"
+      },
+      {
+        "id": 5,
+        "name": "Rapid Response",
+        "capacity": 10,
+        "status": "available"
+      }
+    ],
+    "nodes": [
+      {
+        "name": "Main Warehouse",
+        "type": "Warehouse",
+        "x": 50,
+        "y": 50
+      },
+      {
+        "name": "Secondary Warehouse",
+        "type": "Warehouse",
+        "x": 80,
+        "y": 80
+      },
+      {
+        "name": "City Hospital",
+        "type": "Hospital",
+        "x": 30,
+        "y": 70
+      },
+      {
+        "name": "Rural Hospital",
+        "type": "Hospital",
+        "x": 70,
+        "y": 30
+      },
+      {
+        "name": "Emergency Center",
+        "type": "Hospital",
+        "x": 20,
+        "y": 20
+      },
+      {
+        "name": "North Shelter",
+        "type": "Shelter",
+        "x": 40,
+        "y": 90
+      },
+      {
+        "name": "South Shelter",
+        "type": "Shelter",
+        "x": 90,
+        "y": 40
+      },
+      {
+        "name": "East Shelter",
+        "type": "Shelter",
+        "x": 85,
+        "y": 15
+      },
+      {
+        "name": "West Shelter",
+        "type": "Shelter",
+        "x": 15,
+        "y": 85
+      },
+      {
+        "name": "Downtown Area",
+        "type": "Affected",
+        "x": 60,
+        "y": 60
+      },
+      {
+        "name": "Coastal Region",
+        "type": "Affected",
+        "x": 25,
+        "y": 45
+      },
+      {
+        "name": "Mountain Area",
+        "type": "Affected",
+        "x": 75,
+        "y": 65
+      }
+    ],
+    "edges": [
+      {
+        "from": "Main Warehouse",
+        "to": "City Hospital",
+        "weight": 4
+      },
+      {
+        "from": "Main Warehouse",
+        "to": "North Shelter",
+        "weight": 3
+      },
+      {
+        "from": "Main Warehouse",
+        "to": "Downtown Area",
+        "weight": 2
+      },
+      {
+        "from": "Secondary Warehouse",
+        "to": "Rural Hospital",
+        "weight": 4
+      },
+      {
+        "from": "Secondary Warehouse",
+        "to": "South Shelter",
+        "weight": 3
+      },
+      {
+        "from": "Secondary Warehouse",
+        "to": "Mountain Area",
+        "weight": 5
+      },
+      {
+        "from": "City Hospital",
+        "to": "West Shelter",
+        "weight": 2
+      },
+      {
+        "from": "City Hospital",
+        "to": "Coastal Region",
+        "weight": 3
+      },
+      {
+        "from": "Rural Hospital",
+        "to": "East Shelter",
+        "weight": 4
+      },
+      {
+        "from": "Rural Hospital",
+        "to": "Mountain Area",
+        "weight": 3
+      },
+      {
+        "from": "Emergency Center",
+        "to": "Coastal Region",
+        "weight": 4
+      },
+      {
+        "from": "Emergency Center",
+        "to": "West Shelter",
+        "weight": 5
+      },
+      {
+        "from": "North Shelter",
+        "to": "Downtown Area",
+        "weight": 3
+      },
+      {
+        "from": "South Shelter",
+        "to": "Mountain Area",
+        "weight": 2
+      },
+      {
+        "from": "East Shelter",
+        "to": "Rural Hospital",
+        "weight": 4
+      },
+      {
+        "from": "West Shelter",
+        "to": "Coastal Region",
+        "weight": 3
+      },
+      {
+        "from": "Downtown Area",
+        "to": "Mountain Area",
+        "weight": 4
+      },
+      {
+        "from": "Coastal Region",
+        "to": "City Hospital",
+        "weight": 3
+      }
+    ],
+    "demands": {
+      "City Hospital": [
+        "Medicine",
+        "First Aid",
+        "Water",
+        "Emergency Kit"
+      ],
+      "Rural Hospital": [
+        "Medicine",
+        "Water",
+        "First Aid"
+      ],
+      "Emergency Center": [
+        "Medicine",
+        "First Aid",
+        "Emergency Kit"
+      ],
+      "North Shelter": [
+        "Food",
+        "Water",
+        "Blankets"
+      ],
+      "South Shelter": [
+        "Food",
+        "Water",
+        "Blankets",
+        "First Aid"
+      ],
+      "East Shelter": [
+        "Food",
+        "Blankets",
+        "Water"
+      ],
+      "West Shelter": [
+        "Food",
+        "Water",
+        "Emergency Kit"
+      ],
+      "Downtown Area": [
+        "Water",
+        "Food",
+        "Medicine",
+        "Emergency Kit"
+      ],
+      "Coastal Region": [
+        "Water",
+        "Food",
+        "First Aid",
+        "Blankets"
+      ],
+      "Mountain Area": [
+        "Food",
+        "Blankets",
+        "Emergency Kit",
+        "Medicine"
+      ]
+    }
+  },
+  "graph_image": "simulation_output_20250618_133328.png"
+}

@@ -1,0 +1,52 @@
+{
+  "id": "c0baa7ef-5446-4389-9b04-d14aebc3b335",
+  "timestamp": "20250616_233523",
+  "datetime": "2025-06-16T23:35:23.116514",
+  "type": "custom",
+  "data": {
+    "supplies": [
+      {
+        "name": "pizza",
+        "value": 3.0,
+        "weight": 3.3000000000000003,
+        "category": "food",
+        "food_type": "solid"
+      }
+    ],
+    "vehicles": [
+      {
+        "id": 1,
+        "name": "v1",
+        "capacity": 34.0,
+        "status": "available"
+      }
+    ],
+    "nodes": [
+      {
+        "name": "warehouse1",
+        "type": "Warehouse",
+        "x": 1.0,
+        "y": 1.0
+      },
+      {
+        "name": "a1",
+        "type": "Affected",
+        "x": 3.0,
+        "y": 3.0
+      }
+    ],
+    "edges": [
+      {
+        "from": "warehouse1",
+        "to": "a1",
+        "weight": 3.0
+      }
+    ],
+    "demands": {
+      "a1": [
+        "pizza"
+      ]
+    }
+  },
+  "graph_image": "simulation_output_20250616_233523.png"
+}

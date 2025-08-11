@@ -1,0 +1,162 @@
+{
+  "id": "bdc20e4f-5c02-42bb-a4fe-0a07733373c6",
+  "timestamp": "20250618_133125",
+  "datetime": "2025-06-18T13:31:25.753860",
+  "type": "small",
+  "data": {
+    "supplies": [
+      {
+        "name": "Water",
+        "value": 10,
+        "weight": 3.3,
+        "category": "food",
+        "food_type": "liquid"
+      },
+      {
+        "name": "Food",
+        "value": 8,
+        "weight": 2.2,
+        "category": "food",
+        "food_type": "solid"
+      },
+      {
+        "name": "Medicine",
+        "value": 15,
+        "weight": 1,
+        "category": "non-food",
+        "food_type": null
+      },
+      {
+        "name": "Blankets",
+        "value": 5,
+        "weight": 4,
+        "category": "non-food",
+        "food_type": null
+      }
+    ],
+    "vehicles": [
+      {
+        "id": 1,
+        "name": "Truck 1",
+        "capacity": 20,
+        "status": "available"
+      },
+      {
+        "id": 2,
+        "name": "Van 1",
+        "capacity": 10,
+        "status": "available"
+      },
+      {
+        "id": 3,
+        "name": "Emergency Vehicle",
+        "capacity": 15,
+        "status": "available"
+      }
+    ],
+    "nodes": [
+      {
+        "name": "Central Warehouse",
+        "type": "Warehouse",
+        "x": 50,
+        "y": 50
+      },
+      {
+        "name": "Hospital A",
+        "type": "Hospital",
+        "x": 20,
+        "y": 80
+      },
+      {
+        "name": "Shelter B",
+        "type": "Shelter",
+        "x": 80,
+        "y": 20
+      },
+      {
+        "name": "Affected Area C",
+        "type": "Affected",
+        "x": 70,
+        "y": 70
+      },
+      {
+        "name": "Medical Center",
+        "type": "Hospital",
+        "x": 30,
+        "y": 30
+      },
+      {
+        "name": "Community Shelter",
+        "type": "Shelter",
+        "x": 90,
+        "y": 50
+      }
+    ],
+    "edges": [
+      {
+        "from": "Central Warehouse",
+        "to": "Hospital A",
+        "weight": 5
+      },
+      {
+        "from": "Central Warehouse",
+        "to": "Shelter B",
+        "weight": 4
+      },
+      {
+        "from": "Central Warehouse",
+        "to": "Medical Center",
+        "weight": 3
+      },
+      {
+        "from": "Hospital A",
+        "to": "Affected Area C",
+        "weight": 2
+      },
+      {
+        "from": "Shelter B",
+        "to": "Affected Area C",
+        "weight": 3
+      },
+      {
+        "from": "Medical Center",
+        "to": "Community Shelter",
+        "weight": 4
+      },
+      {
+        "from": "Affected Area C",
+        "to": "Community Shelter",
+        "weight": 3
+      },
+      {
+        "from": "Hospital A",
+        "to": "Medical Center",
+        "weight": 6
+      }
+    ],
+    "demands": {
+      "Hospital A": [
+        "Medicine",
+        "Water"
+      ],
+      "Shelter B": [
+        "Food",
+        "Water",
+        "Blankets"
+      ],
+      "Affected Area C": [
+        "Water",
+        "Food",
+        "Medicine",
+        "Blankets"
+      ],
+      "Medical Center": [],
+      "Community Shelter": [
+        "Food",
+        "Blankets",
+        "Water"
+      ]
+    }
+  },
+  "graph_image": "simulation_output_20250618_133125.png"
+}
